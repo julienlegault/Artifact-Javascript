@@ -303,7 +303,7 @@
 			}),
 			g.set("Collateral Damage", "unit"),
 			p.set("Collateral Damage", function (e, a, t, n) {
-				return "Hero" == u.lanes[a].cards[n][t].CardType && "Black" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Hero" == u.lanes[a].cards[n][t].CardType && "Red" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Enrage", "unit"),
 			p.set("Enrage", function (e, a, t, n) {
@@ -1058,7 +1058,7 @@
 				c.onerror = function () {
 					c.src = "../src/placeholder.png"
 				},
-				c.title = 'Modify a black hero with "Deal 2 damage to this hero\'s enemy neighbors before the action phase."',
+				c.title = 'Modify a blue hero with "Deal 2 damage to this hero\'s enemy neighbors before the action phase."',
 				d.appendChild(c),
 				s.appendChild(d),
 				r.div.addEventListener("beforeTheActionPhase", function (e) {
@@ -1291,6 +1291,18 @@
 			y.set("Moment of Courage", function (e, a) {
 				e.retaliate[4] += 2
 			}),
+			k.set("Sting", "continuousEffect"),
+			y.set("Sting", function (e, a) {
+				e.retaliate[4] += 1
+			}),
+			k.set("Basic Retaliate", "continuousEffect"),
+			y.set("Basic Retaliate", function (e, a) {
+				e.retaliate[4] += 1
+			}),
+			k.set("Base Retaliate", "continuousEffect"),
+			y.set("Base Retaliate", function (e, a) {
+				e.retaliate[4] += 3
+			}),
 			k.set("Concussive Shot", "click"),
 			y.set("Concussive Shot", function (e, a) {
 				return v(e, a.currentTarget, "card", function (e, a, t) {
@@ -1369,6 +1381,10 @@
 			k.set("Great Cleave", "continuousEffect"),
 			y.set("Great Cleave", function (e, a) {
 				e.cleave[4] += Math.floor(i(e.currentAttack) / 2)
+			}),
+			k.set("Base Cleave", "continuousEffect"),
+			y.set("Base Cleave", function (e, a) {
+				e.cleave[4] += 3
 			}),
 			k.set("Glaves of Wisdom", "continuousEffect"),
 			y.set("Glaves of Wisdom", function (e, a) {
