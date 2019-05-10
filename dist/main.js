@@ -306,8 +306,14 @@
 				return "Hero" == u.lanes[a].cards[n][t].CardType && "Red" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Enrage", "unit"),
-			p.set("Enrage", function (e, a, t, n) {
-				return "Green" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[3] += 4, u.lanes[a].cards[n][t].currentAttack[3] += 4, u.lanes[a].cards[n][t].updateDisplay(), !0)
+			p.set("Enrage",  function (e, a, t, n) {
+				return "Green" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
+						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
+						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
+						u.lanes[a].collapse()
+					}, function (e, t, n) {
+						return e == u.lanes[a]
+					}), !1)
 			}),
 			g.set("God's Strength", "unit"),
 			p.set("God's Strength", function (e, a, t, n) {
@@ -631,18 +637,13 @@
 				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, u.lanes[a].cards[n][t].currentAttack[1] += 1, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Eclipse", "lane"),
-			p.set("Eclipse", function (e, a, t, n) {
-				let r = u.lanes[a],
-				s = J.getTurn(),
-				c = J.players[J.getTurn()].getHeros().find(function (e) {
-						return "Luna" == e.Name
-					}).beams;
-				if (c)
-					for (var l = 0; l < c; l++) {
-						let e = r.cards.reduce(d, [[], []])[1 - s];
-						0 != e.length && (e = e[Math.floor(Math.random() * e.length)], null != (e = r.cards[e])[1 - s].Name && (e[1 - s].currentHealth[0] -= 3 - (i(e[1 - s].currentArmor) < 0 ? i(e[1 - s].currentArmor) : 0), r.collapse()))
-					}
-				return !0
+			p.set("Eclipse", function (e, a) {
+				let t = u.lanes[a],
+				n = J.getTurn();
+				return t.cards.forEach(function (e) {
+					null != e[n].Name && "Hero" == e[n].CardType && e[n].cleave[1] += e[n].currentAttack[1], e[n].updateDisplay()
+				}),
+				!0
 			}),
 			g.set("Sow Venom", "lane"),
 			p.set("Sow Venom", function (e, a) {
