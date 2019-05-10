@@ -1534,7 +1534,7 @@
 			y.set("Ignite : Effect", function (e, a) {
 				let t = u.lanes[a.detail.lane];
 				t.cards.forEach(function (e) {
-					null != e[1 - a.detail.player].Name && (e[1 - a.detail.player].currentHealth[0] -= 1 - (i(e[1 - a.detail.player].currentArmor) < 0 ? i(e[1 - a.detail.player].currentArmor) : 0))
+					null != e[1 - a.detail.player].Name && (e[1 - a.detail.player].currentHealth[0] -= 1 - i(e[1 - a.detail.player].currentArmor))
 				}),
 				t.collapse()
 			}),
@@ -1840,7 +1840,7 @@
 			y.set("Smeevil Blacksmith : Effect", function (e, a, t) {
 				let n = u.lanes[a.detail.lane],
 				i = n.cards.reduce(c, [[], []])[a.detail.player];
-				0 != i.length && (i = i[Math.floor(Math.random() * i.length)], null != (i = n.cards[i])[a.detail.player].Name && (i[a.detail.player].currentArmor[1] += 1, i[a.detail.player].updateDisplay())),
+				0 != i.length && (i = i[Math.floor(Math.random() * i.length)], null != (i = n.cards[i])[a.detail.player].Name && (i[a.detail.player].currentArmor[1] += 2, i[a.detail.player].updateDisplay())),
 				e.div.removeEventListener("continuousEffect", t)
 			}),
 			k.set("Roseleaf Rejuvenator : Effect", "continuousEffect"),
