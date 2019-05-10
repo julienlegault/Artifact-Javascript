@@ -1038,7 +1038,6 @@
 				if ("Red" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType)
 					return !1;
 				return u.lanes[a].cards[n][t].div.addEventListener("continuousEffect", function (e) {
-					e.regen[4] += 2,
 					u.lanes[e.detail.lane].cards.forEach(function (a) {
 						null != a[e.detail.player].Name && a[e.detail.player] != u.lanes[e.detail.lane].cards[e.detail.card][e.detail.player] && (a[e.detail.player].regen[4] += 2, a[e.detail.player].updateDisplay())
 					})
