@@ -307,7 +307,7 @@
 			}),
 			g.set("Overpower", "unit"),
 			p.set("Overpower",  function (e, a, t, n) {
-				return "Green" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
+				return "Agility" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
 						u.lanes[a].collapse()
@@ -585,7 +585,7 @@
 			p.set("Murder Plot", function (e, a, t, n) {
 				let i = u.lanes[a],
 				r = i.cards[n][t];
-				return "Hero" == u.lanes[a].cards[n][t].CardType && "Green" == u.lanes[a].cards[n][t].Color && (_(b, "card", function (e, a, t) {
+				return "Hero" == u.lanes[a].cards[n][t].CardType && "Agility" == u.lanes[a].cards[n][t].Color && (_(b, "card", function (e, a, t) {
 						r.arrow = t - n,
 						r.currentAttack[3] += 8,
 						r.updateDisplay()
@@ -707,7 +707,7 @@
 			}),
 			g.set("Gank", "unit"),
 			p.set("Gank", function (e, a, t, n) {
-				return a == J.getCurrentLane() && "Green" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
+				return a == J.getCurrentLane() && "Agility" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
 						u.lanes[a].collapse(),
 						e.collapse(),
@@ -989,7 +989,7 @@
 			}),
 			g.set("The Cover of Night", "unit"),
 			p.set("The Cover of Night", function (e, a, t, n) {
-				if ("Green" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType || t != J.getTurn())
+				if ("Agility" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType || t != J.getTurn())
 					return !1;
 				let i = [[], []],
 				r = u.lanes[a].cards[n][t],
@@ -1040,7 +1040,7 @@
 			}),
 			g.set("Heartstopper Aura", "unit"),
 			p.set("Heartstopper Aura", function (e, a, t, n) {
-				if ("Blue" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType)
+				if ("Intelligence" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType)
 					return !1;
 				let r = u.lanes[a].cards[n][t],
 				s = r.abilitiesContainer,
@@ -1052,7 +1052,7 @@
 				c.onerror = function () {
 					c.src = "../src/placeholder.png"
 				},
-				c.title = 'Modify a blue hero with "Deal 2 damage to this hero\'s enemy neighbors before the action phase."',
+				c.title = 'Modify a Intelligence hero with "Deal 2 damage to this hero\'s enemy neighbors before the action phase."',
 				d.appendChild(c),
 				s.appendChild(d),
 				r.div.addEventListener("beforeTheActionPhase", function (e) {
@@ -1522,7 +1522,7 @@
 			y.set("Grand Melee : Effect", function (e, a) {
 				let t = u.lanes[a.detail.lane];
 				t.cards.some(function (e) {
-					return "Hero" == e[a.detail.player].CardType && "Green" == e[a.detail.player].Color
+					return "Hero" == e[a.detail.player].CardType && "Agility" == e[a.detail.player].Color
 				}) && t.cards.forEach(function (e) {
 					null != e[a.detail.player].Name && "Hero" == e[a.detail.player].CardType && (e[a.detail.player].cleave[4] += 2, e[a.detail.player].updateDisplay()),
 					null != e[1 - a.detail.player].Name && "Hero" == e[1 - a.detail.player].CardType && (e[1 - a.detail.player].cleave[4] += 2, e[1 - a.detail.player].updateDisplay())
