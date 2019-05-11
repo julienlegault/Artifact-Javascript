@@ -417,7 +417,7 @@ triggerMap.set("Grand Melee : Effect", "continuousEffect")
 abilityMap.set("Grand Melee : Effect" , function(c,e){
   let lane = board.lanes[e.detail.lane]
   if (lane.cards.some(function(c){
-    return c[e.detail.player].CardType == "Hero" && c[e.detail.player].Color == "Red"
+    return c[e.detail.player].CardType == "Hero" && c[e.detail.player].Color == "Agility"
   })){
     lane.cards.forEach(function(card){
       if (card[e.detail.player].Name != null && card[e.detail.player].CardType == "Hero") {

@@ -287,11 +287,11 @@
 			}),
 			g.set("Double Edge", "unit"),
 			p.set("Double Edge", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[3] -= 8, u.lanes[a].cards[n][t].currentAttack[3] += 8, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[3] -= 8, u.lanes[a].cards[n][t].currentAttack[3] += 8, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Poised to Strike", "unit"),
 			p.set("Poised to Strike", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[3] += 4, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[3] += 4, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Defensive Stance", "unit"),
 			p.set("Defensive Stance", function (e, a, t, n) {
@@ -303,7 +303,7 @@
 			}),
 			g.set("Collateral Damage", "unit"),
 			p.set("Collateral Damage", function (e, a, t, n) {
-				return "Hero" == u.lanes[a].cards[n][t].CardType && "Red" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Hero" == u.lanes[a].cards[n][t].CardType && "Strength" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Enrage", "unit"),
 			p.set("Enrage",  function (e, a, t, n) {
@@ -317,7 +317,7 @@
 			}),
 			g.set("God's Strength", "unit"),
 			p.set("God's Strength", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[1 + (1 - t == J.getTurn())] += 4, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[1 + (1 - t == J.getTurn())] += 4, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Spring the Trap", "lane"),
 			p.set("Spring the Trap", function (e, a) {
@@ -634,7 +634,7 @@
 			}),
 			g.set("Fighting Instinct", "unit"),
 			p.set("Fighting Instinct", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, u.lanes[a].cards[n][t].currentAttack[1] += 1, u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, u.lanes[a].cards[n][t].currentAttack[1] += 1, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Eclipse", "lane"),
 			p.set("Eclipse", function (e, a) {
@@ -687,7 +687,7 @@
 			}),
 			g.set("Berserker's Call", "unit"),
 			p.set("Berserker's Call", function (e, a, t, n) {
-				if ("Red" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType || t !== J.getTurn())
+				if ("Strength" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType || t !== J.getTurn())
 					return !1;
 				J.dispatchEvent("whenAttacking");
 				const i = u.lanes[a];
@@ -698,7 +698,7 @@
 			}),
 			g.set("Duel", "unit"),
 			p.set("Duel", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
 						u.lanes[a].collapse()
 					}, function (e, t, n) {
@@ -750,14 +750,7 @@
 			}),
 			g.set("Echo Slam", "lane"),
 			p.set("Echo Slam", function (e, a, t, n) {
-				let r = u.lanes[a],
-				s = J.getTurn(),
-				c = r.cards.reduce(d, [[], []])[1 - s];
-				return 0 != c.length && c.forEach(function (e) {
-					null != (e = r.cards[e])[1 - s].Name && (e[1 - s].currentHealth[0] -= c.length - i(e[1 - s].currentArmor))
-				}),
-				r.collapse(),
-				!0
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[3] += 8, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Healing Salve", "unit"),
 			p.set("Healing Salve", function (e, a, t, n) {
@@ -813,11 +806,11 @@
 			}),
 			g.set("Fight Through the Pain", "unit"),
 			p.set("Fight Through the Pain", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[3] += 2, J.gianInitiative(), u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[3] += 2, J.gianInitiative(), u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Kraken Shell", "unit"),
 			p.set("Kraken Shell", function (e, a, t, n) {
-				return "Red" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, J.gianInitiative(), u.lanes[a].cards[n][t].updateDisplay(), !0)
+				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, J.gianInitiative(), u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Rend Armor", "unit"),
 			p.set("Rend Armor", function (e, a, t, n) {
@@ -1036,7 +1029,7 @@
 			}),
 			g.set("Allseeing One's Favor", "unit"),
 			p.set("Allseeing One's Favor", function (e, a, t, n) {
-				if ("Red" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType)
+				if ("Strength" != u.lanes[a].cards[n][t].Color || "Hero" != u.lanes[a].cards[n][t].CardType)
 					return !1;
 				return u.lanes[a].cards[n][t].div.addEventListener("continuousEffect", function (e) {
 					u.lanes[e.detail.lane].cards.forEach(function (a) {
@@ -3364,7 +3357,7 @@
 								english: "Fighting Instinct"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with +1 Attack and +1 Armor."
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with +1 Attack and +1 Armor."
 							},
 							mini_image: {
 							default:
@@ -7330,7 +7323,7 @@
 								english: "Path of the Bold"
 							},
 							card_text: {
-								english: "After you play a <span style='font-weight:bold;color:#c2352d;'>red card</span>, modify a random ally with +1 Attack."
+								english: "After you play a <span style='font-weight:bold;color:#c2352d;'>strength card</span>, modify a random ally with +1 Attack."
 							},
 							mini_image: {
 							default:
@@ -7914,7 +7907,7 @@
 								english: "Grand Melee"
 							},
 							card_text: {
-								english: "If there is an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span> in this lane, all heroes have +2 Cleave."
+								english: "If there is an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span> in this lane, all heroes have +2 Cleave."
 							},
 							mini_image: {
 							default:
@@ -9911,7 +9904,7 @@
 								english: "Enrage"
 							},
 							card_text: {
-								english: "Give a <span style='font-weight:bold;color:#c2352d;'>red hero</span> +4 Attack and +4 Armor this round."
+								english: "Give a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> +4 Attack and +4 Armor this round."
 							},
 							mini_image: {
 							default:
@@ -9957,7 +9950,7 @@
 								english: "Berserker's Call"
 							},
 							card_text: {
-								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span>. It battles its enemy neighbors."
+								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span>. It battles its enemy neighbors."
 							},
 							mini_image: {
 							default:
@@ -10003,7 +9996,7 @@
 								english: "Kraken Shell"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with +1 Armor. <br><br><span style='font-weight:bold;color:#ffffff;'> Get initiative.</span>"
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with +1 Armor. <br><br><span style='font-weight:bold;color:#ffffff;'> Get initiative.</span>"
 							},
 							mini_image: {
 							default:
@@ -10049,7 +10042,7 @@
 								english: "Double Edge"
 							},
 							card_text: {
-								english: "Give a <span style='font-weight:bold;color:#c2352d;'>red hero</span> +8 Attack and -8 Armor this round."
+								english: "Give a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> +8 Attack and -8 Armor this round."
 							},
 							mini_image: {
 							default:
@@ -10072,7 +10065,7 @@
 								english: "Primal Roar"
 							},
 							card_text: {
-								english: "Stun a unit blocking an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span> this round. Move that unit's allied neighbors to random other lanes."
+								english: "Stun a unit blocking an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span> this round. Move that unit's allied neighbors to random other lanes."
 							},
 							mini_image: {
 							default:
@@ -10143,7 +10136,7 @@
 								english: "Whirling Death"
 							},
 							card_text: {
-								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span>. Deal 2 damage to its enemy neighbors and give them -2 Attack this round."
+								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span>. Deal 2 damage to its enemy neighbors and give them -2 Attack this round."
 							},
 							mini_image: {
 							default:
@@ -10489,7 +10482,7 @@
 								english: "Poised to Strike"
 							},
 							card_text: {
-								english: "Give a <span style='font-weight:bold;color:#c2352d;'>red hero</span> +4 Attack this round."
+								english: "Give a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> +4 Attack this round."
 							},
 							mini_image: {
 							default:
@@ -10787,7 +10780,7 @@
 								english: "Heroic Resolve"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with \"After you play a non-item card costing 2 or less, modify this hero with +2 Health.\""
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with \"After you play a non-item card costing 2 or less, modify this hero with +2 Health.\""
 							},
 							mini_image: {
 							default:
@@ -10837,7 +10830,7 @@
 								english: "God's Strength"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with +4 Attack."
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with +4 Attack."
 							},
 							mini_image: {
 							default:
@@ -11064,7 +11057,7 @@
 								english: "Duel"
 							},
 							card_text: {
-								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span> and another unit. They battle each other."
+								english: "Choose an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span> and another unit. They battle each other."
 							},
 							mini_image: {
 							default:
@@ -11189,7 +11182,7 @@
 								english: "Rising Anger"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with \"After you play a non-item card costing 2 or less, modify this hero with +1 Attack.\""
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with \"After you play a non-item card costing 2 or less, modify this hero with +1 Attack.\""
 							},
 							mini_image: {
 							default:
@@ -11214,7 +11207,7 @@
 								english: "Sucker Punch"
 							},
 							card_text: {
-								english: "Stun a unit blocking an <span style='font-weight:bold;color:#c2352d;'>allied red hero</span> this round. Deal 2 damage to that unit."
+								english: "Stun a unit blocking an <span style='font-weight:bold;color:#c2352d;'>allied strength hero</span> this round. Deal 2 damage to that unit."
 							},
 							mini_image: {
 							default:
@@ -11543,7 +11536,7 @@
 								english: "Fight Through The Pain"
 							},
 							card_text: {
-								english: "Give a <span style='font-weight:bold;color:#c2352d;'>red hero</span> +2 Armor this round. <br><br><span style='font-weight:bold;color:#ffffff;'> Get initiative.</span>"
+								english: "Give a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> +2 Armor this round. <br><br><span style='font-weight:bold;color:#ffffff;'> Get initiative.</span>"
 							},
 							mini_image: {
 							default:
@@ -11743,7 +11736,7 @@
 								english: "Tresdin's Standards"
 							},
 							card_text: {
-								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>red hero</span> with \"After you play a <span style='font-weight:bold;color:#c2352d;'>red card</span>, give this hero and its allied neighbors +1 Attack and +1 Armor this round.\""
+								english: "Modify a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> with \"After you play a <span style='font-weight:bold;color:#c2352d;'>red card</span>, give this hero and its allied neighbors +1 Attack and +1 Armor this round.\""
 							},
 							mini_image: {
 							default:

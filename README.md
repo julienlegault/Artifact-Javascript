@@ -8,7 +8,7 @@ Remove the "playartifact.com" from deck codes, they should start with ADC
 
 Current Cards:
 
-Red: Kraken Shell,The Omexe Arena,Crippling Blow,Clear The Deck,Rend Armor,Fight Through the Pain,Cursed Satyr,Stonehall Elite,Smeevil Armsmaster,Viscous Nasal Goo,Ogre Corpse Tosser,Combat Training,Pick a Fight,Grand Melee,Duel,Berserker's Call,Fighting Instinct,New Orders,Time of Triumph,New Orders,Legion Standard Bearer,Mercenary Exiles,Poised to Strike,Defensive Stance,Enrage,God's Strength,Spring the Trap,Double Edge,Bronze Legionnaire,Marrowfell Brawler,Ogre Conscript
+Strength: Kraken Shell,The Omexe Arena,Crippling Blow,Clear The Deck,Rend Armor,Fight Through the Pain,Cursed Satyr,Stonehall Elite,Smeevil Armsmaster,Viscous Nasal Goo,Ogre Corpse Tosser,Combat Training,Pick a Fight,Grand Melee,Duel,Berserker's Call,Fighting Instinct,New Orders,Time of Triumph,New Orders,Legion Standard Bearer,Mercenary Exiles,Poised to Strike,Defensive Stance,Enrage,God's Strength,Spring the Trap,Double Edge,Bronze Legionnaire,Marrowfell Brawler,Ogre Conscript
 
 
 Blue: Friendly Fire,Fog of War,Arcane Assault,Compel,Annihilation,At Any Cost,Whispers of Madness,Cunning Plan,Ventriloquy,Diabolic Revelation,Howling Mind,Echo Slam,Battlefield Control,Frostbite,Mystic Flare,Sow Venom,Barracks,Eclipse,Satyr Magician,Ignite,Strafing Run,Lightning Strike,Rolling Storm,Tower Barrage,Foresight,Prey on the Weak,Remote Detonation,Thunderstorm,Bolt of Damocles,Conflagration,Call the Reserves,Better Late Than Never,Dimensional Portal,Troll Soothsayer
@@ -25,7 +25,7 @@ Items: Rumusque Vestments,Wingfall Hammer,Blink Dagger,Broadsword,Claymore,Chain
 
 Current Heros:
 
-Red: Tidehunter,Legion Commander,Axe,Centaur Warrunner,Bristleback,Sven,Pugna,Keefe the Bold
+Strength: Tidehunter,Legion Commander,Axe,Centaur Warrunner,Bristleback,Sven,Pugna,Keefe the Bold
 
 Blue: Skywrath Mage,Earthshaker,Venomancer,Prellex,Luna,J'Muy the Wise
 

@@ -106,7 +106,7 @@ effectMap.set("Avernus' Blessing" , function(ev, lane, player, index){
 
 targetMap.set("Double Edge" , "unit")
 effectMap.set("Double Edge" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[3] -= 8;
   board.lanes[lane].cards[index][player].currentAttack[3] += 8;
   board.lanes[lane].cards[index][player].updateDisplay()
@@ -115,7 +115,7 @@ effectMap.set("Double Edge" , function(ev, lane, player, index){
 
 targetMap.set("Poised to Strike" , "unit")
 effectMap.set("Poised to Strike" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentAttack[3] += 4;
   board.lanes[lane].cards[index][player].updateDisplay()
   return true
@@ -147,7 +147,7 @@ effectMap.set("Collateral Damage" , function(ev, lane, player, index){
 
 targetMap.set("Enrage" , "unit")
 effectMap.set("Enrage" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[3] += 4;
   board.lanes[lane].cards[index][player].currentAttack[3] += 4;
   board.lanes[lane].cards[index][player].updateDisplay()
@@ -156,7 +156,7 @@ effectMap.set("Enrage" , function(ev, lane, player, index){
 
 targetMap.set("God's Strength" , "unit")
 effectMap.set("God's Strength" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentAttack[1 + (1 - player == game.getTurn())] += 4;
   board.lanes[lane].cards[index][player].updateDisplay()
   return true
@@ -536,7 +536,7 @@ effectMap.set("Time of Triumph" , function(ev, lane){
 
 targetMap.set("Fighting Instinct" , "unit")
 effectMap.set("Fighting Instinct" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[1] += 1;
   board.lanes[lane].cards[index][player].currentAttack[1] += 1;
   board.lanes[lane].cards[index][player].updateDisplay()
@@ -617,7 +617,7 @@ effectMap.set("Coup de Grace" , function(ev, lane, player, index){
 
 targetMap.set("Berserker's Call", "unit")
 effectMap.set("Berserker's Call", function(ev, lane, player, index) {
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero" || player !== game.getTurn()) return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero" || player !== game.getTurn()) return false
   game.dispatchEvent("whenAttacking")
   const currentLane = board.lanes[lane]
   for (var i = -1; i <= 1; i++) {
@@ -632,7 +632,7 @@ effectMap.set("Berserker's Call", function(ev, lane, player, index) {
 
 targetMap.set("Duel", "unit")
 effectMap.set("Duel", function(ev, lane, player, index) {
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero" || player !== game.getTurn()) return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero" || player !== game.getTurn()) return false
   // let l = board.lanes[lane]
   // let card = l.cards[index][player]
   doubleTarget(draggedCard, "card", function($lane,$player,$targetCard){
@@ -790,7 +790,7 @@ effectMap.set("Viscous Nasal Goo" , function(ev, lane, player, index){
 
 targetMap.set("Fight Through the Pain" , "unit")
 effectMap.set("Fight Through the Pain" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[3] += 2;
   game.gianInitiative()
   board.lanes[lane].cards[index][player].updateDisplay()
@@ -799,7 +799,7 @@ effectMap.set("Fight Through the Pain" , function(ev, lane, player, index){
 
 targetMap.set("Kraken Shell" , "unit")
 effectMap.set("Kraken Shell" , function(ev, lane, player, index){
-  if (board.lanes[lane].cards[index][player].Color != "Red" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
+  if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[1] += 1;
   game.gianInitiative()
   board.lanes[lane].cards[index][player].updateDisplay()
