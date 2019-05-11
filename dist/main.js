@@ -305,8 +305,8 @@
 			p.set("Collateral Damage", function (e, a, t, n) {
 				return "Hero" == u.lanes[a].cards[n][t].CardType && "Strength" == u.lanes[a].cards[n][t].Color && (u.lanes[a].cards[n][t].siege[1 + (1 - t == J.getTurn())] += 3, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
-			g.set("Enrage", "unit"),
-			p.set("Enrage",  function (e, a, t, n) {
+			g.set("Overpower", "unit"),
+			p.set("Overpower",  function (e, a, t, n) {
 				return "Green" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && t === J.getTurn() && (_(b, "card", function (e, i, r) {
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
 						z(a, t, n, u.lanes.indexOf(e), i, r, !1),
@@ -636,8 +636,8 @@
 			p.set("Fighting Instinct", function (e, a, t, n) {
 				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentArmor[1] += 1, u.lanes[a].cards[n][t].currentAttack[1] += 1, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
-			g.set("Eclipse", "lane"),
-			p.set("Eclipse", function (e, a) {
+			g.set("Moon Glaves", "lane"),
+			p.set("Moon Glaves", function (e, a) {
 				let t = u.lanes[a],
 				n = J.getTurn();
 				return t.cards.forEach(function (e) {
@@ -645,8 +645,8 @@
 				}),
 				!0
 			}),
-			g.set("Sow Venom", "lane"),
-			p.set("Sow Venom", function (e, a) {
+			g.set("Siege Units", "lane"),
+			p.set("Siege Units", function (e, a) {
 				let t = [[], []];
 				a = u.lanes[a];
 				for (let e = 0; e < 2; e++) {
@@ -748,8 +748,8 @@
 				return i.collapse(),
 				!0
 			}),
-			g.set("Echo Slam", "lane"),
-			p.set("Echo Slam", function (e, a, t, n) {
+			g.set("Enchant Totem", "lane"),
+			p.set("Enchant Totem", function (e, a, t, n) {
 				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[3] += 8, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
 			g.set("Healing Salve", "unit"),
@@ -3586,7 +3586,7 @@
 							base_card_id: 10002,
 							card_type: "Spell",
 							card_name: {
-								english: "Sow Venom"
+								english: "Siege Units"
 							},
 							card_text: {
 								english: "Summon two <span style='font-weight:bold;color:#ffffff;'>Plague Wards</span>."
@@ -3792,7 +3792,7 @@
 							base_card_id: 10007,
 							card_type: "Spell",
 							card_name: {
-								english: "Eclipse"
+								english: "Moon Glaves"
 							},
 							card_text: {
 								english: "Repeat one time for each charge:  Deal 3 piercing damage to a random enemy."
@@ -6753,7 +6753,7 @@
 							base_card_id: 10117,
 							card_type: "Creep",
 							card_name: {
-								english: "Roseleaf Druid"
+								english: "Nature's Guise"
 							},
 							card_text: {
 								english: "Your tower has +1 Mana."
@@ -9901,7 +9901,7 @@
 							base_card_id: 10282,
 							card_type: "Spell",
 							card_name: {
-								english: "Enrage"
+								english: "Overpower"
 							},
 							card_text: {
 								english: "Give a <span style='font-weight:bold;color:#c2352d;'>strength hero</span> +4 Attack and +4 Armor this round."
@@ -10677,7 +10677,7 @@
 							base_card_id: 10323,
 							card_type: "Spell",
 							card_name: {
-								english: "Echo Slam"
+								english: "Enchant Totem"
 							},
 							card_text: {
 								english: "Deal damage to each enemy equal to the number of enemies."
@@ -11031,7 +11031,7 @@
 							base_card_id: 10340,
 							card_type: "Spell",
 							card_name: {
-								english: "Hand of God"
+								english: "Holy Persuasion"
 							},
 							card_text: {
 								english: "Fully heal each ally. Give allies Damage Immunity this round."
@@ -12305,7 +12305,7 @@
 							base_card_id: 10538,
 							card_type: "Spell",
 							card_name: {
-								english: "Ball Lightning"
+								english: "Static Remnant"
 							},
 							card_text: {
 								english: "Move an <span style='font-weight:bold;color:#736e80;'>allied black hero</span> to an empty combat position in any lane."
@@ -12668,9 +12668,9 @@
 				J.infoDisplayUpdate(),
 				c && z(n, r, s, e, a, t, !1, !1)
 			}
-			const $ = ["Blood Rage", "Track", "Heartstopper Aura", "Kraken Shell", "Allseeing One's Favor", "Defend the Weak", "Juke", "Roseleaf Rejuvenator", "Champion of the Ancient", "Smeevil Blacksmith", "The Cover of Night", "Hip Fire", "Lodestone Demolition", "Oglodi Vandal", "Oglodi Catapult", "Friendly Fire", "Fog of War", "Arcane Assault", "Compel", "Annihilation", "At Any Cost", "Whispers of Madness", "Cunning Plan", "Ventriloquy", "Diabolic Revelation", "The Omexe Arena", "Crippling Blow", "Clear The Deck", "Rend Armor", "Fight Through the Pain", "Cursed Satyr", "Stonehall Elite", "Smeevil Armsmaster", "Assassin's Shadow", "Pit Fighter of Quoidge", "Viscous Nasal Goo", "Ogre Corpse Tosser", "Murder Plot", "Collateral Damage", "Combat Training", "Pick a Fight", "Trebuchets", "Unsupervised Artillery", "Homefield Advantage", "Iron Fog Goldmine", "Assured Destruction", "Escape Route", "Howling Mind", "Grand Melee", "Assassinate", "Echo Slam", "Winter's Curse", "Battlefield Control", "Gust", "Act of Defiance", "Frostbite", "Gank", "Duel", "Berserker's Call", "Prowler Vanguard", "Coup de Grace", "Mystic Flare", "Sow Venom", "Barracks", "Eclipse", "Savage Wolf", "Fighting Instinct", "Thunderhide Pack", "Emissary of the Quorum", "New Orders", "Ion Shell", "Time of Triumph", "Forward Charge", "Altar of the Mad Moon", "New Orders", "Sister of the Veil", "Rebel Decoy", "Steam Cannon", "Keenfolk Turret", "Assassin's Apprentice", "Grazing Shot", "No Accident", "Slay", "Pick Off", "Selfish Cleric", "Revtel Convoy", "Ravenous Mass", "Rampaging Hellbear", "Satyr Duelist", "Savage Wolf", "Satyr Magician", "Disciple of Nevermore", "Legion Standard Bearer", "Mercenary Exiles", "Verdant Refuge", "Mist of Avernus", "Ignite", "Assault Ladders", "Mana Drain", "Payday", "Arcane Censure", "Stars Align", "Bellow", "Rumusque Blessing", "Defensive Bloom", "Restoration Effort", "Intimidation", "Curse of Atrophy", "Strafing Run", "Lightning Strike", "Rolling Storm", "Tower Barrage", "Foresight", "Prey on the Weak", "Remote Detonation", "Thunderstorm", "Bolt of Damocles", "Poised to Strike", "Defensive Stance", "Enrage", "God's Strength", "Spring the Trap", "Double Edge", "Conflagration", "Call the Reserves", "Better Late Than Never", "Iron Branch Protection", "Avernus' Blessing", "Dimensional Portal", "Bronze Legionnaire", "Marrowfell Brawler", "Ogre Conscript", "Troll Soothsayer", "Untested Grunt", "Thunderhide Alpha"];
+			const $ = ["Blood Rage", "Track", "Heartstopper Aura", "Kraken Shell", "Allseeing One's Favor", "Defend the Weak", "Juke", "Roseleaf Rejuvenator", "Champion of the Ancient", "Smeevil Blacksmith", "The Cover of Night", "Hip Fire", "Lodestone Demolition", "Oglodi Vandal", "Oglodi Catapult", "Friendly Fire", "Fog of War", "Arcane Assault", "Compel", "At Any Cost", "Whispers of Madness", "Cunning Plan", "Ventriloquy", "Diabolic Revelation", "The Omexe Arena", "Crippling Blow", "Clear The Deck", "Rend Armor", "Fight Through the Pain", "Cursed Satyr", "Stonehall Elite", "Smeevil Armsmaster", "Assassin's Shadow", "Pit Fighter of Quoidge", "Viscous Nasal Goo", "Ogre Corpse Tosser", "Murder Plot", "Collateral Damage", "Combat Training", "Pick a Fight", "Trebuchets", "Unsupervised Artillery", "Homefield Advantage", "Iron Fog Goldmine", "Assured Destruction", "Escape Route", "Howling Mind", "Grand Melee", "Assassinate", "Enchant Totem", "Winter's Curse", "Battlefield Control", "Gust", "Act of Defiance", "Frostbite", "Gank", "Duel", "Berserker's Call", "Prowler Vanguard", "Coup de Grace", "Mystic Flare", "Siege Units", "Barracks", "Moon Glaves", "Savage Wolf", "Fighting Instinct", "Thunderhide Pack", "New Orders", "Ion Shell", "Time of Triumph", "Forward Charge", "Altar of the Mad Moon", "New Orders", "Sister of the Veil", "Rebel Decoy", "Steam Cannon", "Keenfolk Turret", "Assassin's Apprentice", "Grazing Shot", "No Accident", "Slay", "Pick Off", "Selfish Cleric", "Revtel Convoy", "Ravenous Mass", "Rampaging Hellbear", "Satyr Duelist", "Savage Wolf", "Satyr Magician", "Disciple of Nevermore", "Legion Standard Bearer", "Mercenary Exiles", "Verdant Refuge", "Mist of Avernus", "Ignite", "Assault Ladders", "Mana Drain", "Payday", "Arcane Censure", "Stars Align", "Bellow", "Rumusque Blessing", "Defensive Bloom", "Restoration Effort", "Intimidation", "Curse of Atrophy", "Strafing Run", "Lightning Strike", "Rolling Storm", "Tower Barrage", "Foresight", "Prey on the Weak", "Remote Detonation", "Thunderstorm", "Poised to Strike", "Defensive Stance", "Overpower", "God's Strength", "Spring the Trap", "Double Edge", "Conflagration", "Call the Reserves", "Better Late Than Never", "Iron Branch Protection", "Avernus' Blessing", "Dimensional Portal", "Bronze Legionnaire", "Marrowfell Brawler", "Ogre Conscript", "Troll Soothsayer", "Untested Grunt", "Thunderhide Alpha"];
 			let j,
-			X = ["Blood Rage", "Track", "Heartstopper Aura", "Kraken Shell", "Allseeing One's Favor", "Defend the Weak", "Roseleaf Rejuvenator", "Champion of the Ancient", "Smeevil Blacksmith", "Hip Fire", "Oglodi Vandal", "Oglodi Catapult", "Fog of War", "Arcane Assault", "The Omexe Arena", "Crippling Blow", "Clear The Deck", "Fight Through the Pain", "Cursed Satyr", "Stonehall Elite", "Smeevil Armsmaster", "Assassin's Shadow", "Pit Fighter of Quoidge", "Viscous Nasal Goo", "Ogre Corpse Tosser", "Collateral Damage", "Combat Training", "Trebuchets", "Homefield Advantage", "Iron Fog Goldmine", "Payday", "Assured Destruction", "Howling Mind", "Assassinate", "Echo Slam", "Winter's Curse", "Gust", "Act of Defiance", "Frostbite", "Berserker's Call", "Prowler Vanguard", "Coup de Grace", "Mystic Flare", "Sow Venom", "Barracks", "Thunderhide Pack", "Altar of the Mad Moon", "Time of Triumph", "Forward Charge", "Ion Shell", "Sister of the Veil", "Rebel Decoy", "Assassin's Apprentice", "Grazing Shot", "No Accident", "Slay", "Pick Off", "Selfish Cleric", "Revtel Convoy", "Ravenous Mass", "Rampaging Hellbear", "Satyr Duelist", "Savage Wolf", "Satyr Magician", "Disciple of Nevermore", "Legion Standard Bearer", "Mercenary Exiles", "Verdant Refuge", "Mist of Avernus", "Ignite", "Assault Ladders", "Mana Drain", "Arcane Censure", "Stars Align", "Bellow", "Rumusque Blessing", "Defensive Bloom", "Restoration Effort", "Intimidation", "Curse of Atrophy", "Strafing Run", "Lightning Strike", "Rolling Storm", "Tower Barrage", "Foresight", "Prey on the Weak", "Remote Detonation", "Thunderstorm", "Bolt of Damocles", "Poised to Strike", "Defensive Stance", "Enrage", "God's Strength", "Spring the Trap", "Double Edge", "Conflagration", "Call the Reserves", "Better Late Than Never", "Iron Branch Protection", "Avernus' Blessing", "Dimensional Portal", "Bronze Legionnaire", "Marrowfell Brawler", "Ogre Conscript", "Troll Soothsayer", "Untested Grunt", "Thunderhide Alpha"],
+			X = ["Blood Rage", "Track", "Heartstopper Aura", "Kraken Shell", "Allseeing One's Favor", "Defend the Weak", "Roseleaf Rejuvenator", "Champion of the Ancient", "Smeevil Blacksmith", "Hip Fire", "Oglodi Vandal", "Oglodi Catapult", "Fog of War", "Arcane Assault", "The Omexe Arena", "Crippling Blow", "Clear The Deck", "Fight Through the Pain", "Cursed Satyr", "Stonehall Elite", "Smeevil Armsmaster", "Assassin's Shadow", "Pit Fighter of Quoidge", "Viscous Nasal Goo", "Ogre Corpse Tosser", "Collateral Damage", "Combat Training", "Trebuchets", "Homefield Advantage", "Iron Fog Goldmine", "Payday", "Assured Destruction", "Howling Mind", "Assassinate", "Enchant Totem", "Winter's Curse", "Gust", "Act of Defiance", "Frostbite", "Berserker's Call", "Prowler Vanguard", "Coup de Grace", "Mystic Flare", "Siege Units", "Barracks", "Thunderhide Pack", "Altar of the Mad Moon", "Time of Triumph", "Forward Charge", "Ion Shell", "Sister of the Veil", "Rebel Decoy", "Assassin's Apprentice", "Grazing Shot", "No Accident", "Slay", "Pick Off", "Selfish Cleric", "Revtel Convoy", "Ravenous Mass", "Rampaging Hellbear", "Satyr Duelist", "Savage Wolf", "Satyr Magician", "Disciple of Nevermore", "Legion Standard Bearer", "Mercenary Exiles", "Verdant Refuge", "Mist of Avernus", "Ignite", "Assault Ladders", "Mana Drain", "Arcane Censure", "Stars Align", "Bellow", "Rumusque Blessing", "Defensive Bloom", "Restoration Effort", "Intimidation", "Curse of Atrophy", "Strafing Run", "Lightning Strike", "Rolling Storm", "Tower Barrage", "Foresight", "Prey on the Weak", "Remote Detonation", "Thunderstorm", "Poised to Strike", "Defensive Stance", "Overpower", "God's Strength", "Spring the Trap", "Double Edge", "Conflagration", "Call the Reserves", "Better Late Than Never", "Iron Branch Protection", "Avernus' Blessing", "Dimensional Portal", "Bronze Legionnaire", "Marrowfell Brawler", "Ogre Conscript", "Troll Soothsayer", "Untested Grunt", "Thunderhide Alpha"],
 			Y = ["Bloodseeker", "Necrophos", "Bristleback", "J'Muy the Wise", "Legion Commander", "Lycan", "Centaur Warrunner", "Drow Ranger", "Sorla Khan", "Phantom Assassin", "Bounty Hunter", "Venomancer", "Prellex", "Sven", "Luna", "Treant Protector", "Enchantress", "Debbi the Cunning", "Keefe the Bold", "Fahrvhan the Dreamer", "Axe"];
 			Y = n(Y).slice(0, 5);
 			let Z,

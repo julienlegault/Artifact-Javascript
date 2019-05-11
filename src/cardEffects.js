@@ -145,8 +145,8 @@ effectMap.set("Collateral Damage" , function(ev, lane, player, index){
   return true
 });
 
-targetMap.set("Enrage" , "unit")
-effectMap.set("Enrage" , function(ev, lane, player, index){
+targetMap.set("Overpower" , "unit")
+effectMap.set("Overpower" , function(ev, lane, player, index){
   if (board.lanes[lane].cards[index][player].Color != "Strength" || board.lanes[lane].cards[index][player].CardType != "Hero") return false
   board.lanes[lane].cards[index][player].currentArmor[3] += 4;
   board.lanes[lane].cards[index][player].currentAttack[3] += 4;
@@ -544,8 +544,8 @@ effectMap.set("Fighting Instinct" , function(ev, lane, player, index){
 });
 
 
-targetMap.set("Eclipse" , "lane")
-effectMap.set("Eclipse" , function(ev, lane, player, index){
+targetMap.set("Moon Glaves" , "lane")
+effectMap.set("Moon Glaves" , function(ev, lane, player, index){
   let l = board.lanes[lane]
   let $player = game.getTurn()
   let beams = game.players[game.getTurn()].getHeros().find(function(luna){return luna.Name == "Luna"}).beams
@@ -565,8 +565,8 @@ effectMap.set("Eclipse" , function(ev, lane, player, index){
   return true
 });
 
-targetMap.set("Sow Venom" , "lane")
-effectMap.set("Sow Venom" , function(ev, lane){
+targetMap.set("Siege Units" , "lane")
+effectMap.set("Siege Units" , function(ev, lane){
   let summons = [[],[]]
   lane = board.lanes[lane]
   for (let i = 0; i < 2; i++){
@@ -706,8 +706,8 @@ effectMap.set("Winter's Curse", function(ev, lane, player, index) {
 
 });
 
-targetMap.set("Echo Slam" , "lane")
-effectMap.set("Echo Slam" , function(ev, lane, player, index){
+targetMap.set("Enchant Totem" , "lane")
+effectMap.set("Enchant Totem" , function(ev, lane, player, index){
   let l = board.lanes[lane]
   let $player = game.getTurn()
 
