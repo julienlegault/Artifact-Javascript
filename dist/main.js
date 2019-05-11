@@ -641,8 +641,7 @@
 				let t = u.lanes[a],
 				n = J.getTurn();
 				return t.cards.forEach(function (e) {
-				    let curAt = e[n].currentAttack[1],
-					null != e[n].Name && "Hero" == e[n].CardType && e[n].cleave[1] += curAt, e[n].updateDisplay()
+					null != e[n].Name && "Hero" == e[n].CardType && e[n].cleave[1] += 5, e[n].updateDisplay()
 				}),
 				!0
 			}),
