@@ -641,7 +641,7 @@
 				let t = u.lanes[a],
 				n = J.getTurn();
 				return t.cards.forEach(function (e) {
-					null != e[n].Name && "Hero" == e[n].CardType && e[n].cleave[1] += 5, e[n].updateDisplay()
+					null != e[n].Name && "Hero" == e[n].CardType && (e[n].cleave[1] += 5, e[n].updateDisplay())
 				}),
 				!0
 			}),
@@ -651,7 +651,7 @@
 				a = u.lanes[a];
 				for (let e = 0; e < 2; e++) {
 					let e = E(V.Cards.find(function (e) {
-								return "Plague Ward" == e.Name
+								return "Oglodi Catapult" == e.Name
 							}), J.players[J.getTurn()]);
 					t[J.getTurn()].push(e)
 				}
