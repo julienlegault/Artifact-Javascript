@@ -748,7 +748,7 @@
 				return i.collapse(),
 				!0
 			}),
-			g.set("Enchant Totem", "lane"),
+			g.set("Enchant Totem", "unit"),
 			p.set("Enchant Totem", function (e, a, t, n) {
 				return "Strength" == u.lanes[a].cards[n][t].Color && "Hero" == u.lanes[a].cards[n][t].CardType && (u.lanes[a].cards[n][t].currentAttack[3] += 8, u.lanes[a].cards[n][t].updateDisplay(), !0)
 			}),
