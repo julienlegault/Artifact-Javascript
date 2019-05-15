@@ -12694,6 +12694,7 @@
 			he = document.getElementById("heroes-reset-btn"),
 			ue = document.getElementById("heroes-shuffle-btn"),
 			be = document.getElementById("import-game-btn"),
+			importGreen = document.getElementById("import-green-btn"),
 			ye = document.getElementById("other-game-btn"),
 			ke = document.getElementById("other-options"),
 			ve = document.getElementById("tower-handicap"),
@@ -12842,6 +12843,47 @@
 			}),
 			be.addEventListener("click", function () {
 				let e = prompt("Enter Deck Code \nNot all cards impelmented, cards not impelmented will be ignored");
+				if (e) {
+					ge.checked = !1;
+					let a = F.ParseDeck(e);
+					ne.value = a.cards.map(function (e) {
+							let a = G.card_set.card_list.find(function (a) {
+									return a.card_id == e.id
+								});
+							(a = a || U.card_set.card_list.find(function (a) {
+										return a.card_id == e.id
+									})) && (a = a.card_name.english),
+							a = [a];
+							for (var t = 1; t < e.count; t++)
+								a.push(a[0]);
+							return a
+						}).flat(),
+					ie.value = ne.value,
+					re.value = a.heroes.sort(function (e, a) {
+							return e.turn - a.turn
+						}).map(function (e) {
+							let a = G.card_set.card_list.find(function (a) {
+									return a.card_id == e.id
+								});
+							return (a = a || U.card_set.card_list.find(function (a) {
+										return a.card_id == e.id
+									})) && (a = a.card_name.english),
+							a
+						}),
+					re.value.split(",").forEach(function (e) {
+						let a;
+						(e = V.Cards.find(function (a) {
+									return a.Name == e
+								})) && (a = V.Cards.find(function (a) {
+									return a.Id == e.SignatureCard
+								})),
+						ne.value += "," + a.Name + "," + a.Name + "," + a.Name
+					}),
+					re.value += "," + re.value
+				}
+			})
+			importGreen.addEventListener("click", function () {
+				let e = "ADCJUkANrgCTAUYg6u7AoOlAUKgAZRSgwSyAb4BpgFyAQ__";
 				if (e) {
 					ge.checked = !1;
 					let a = F.ParseDeck(e);
