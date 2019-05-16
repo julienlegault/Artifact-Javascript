@@ -8,7 +8,13 @@ Remove the "playartifact.com" from deck codes, they should start with ADC
 
 Current Cards:
 
-Kraken Shell,The Omexe Arena,Crippling Blow,Clear The Deck,Rend Armor,Fight Through the Pain,Cursed Satyr,Stonehall Elite,Smeevil Armsmaster,Viscous Nasal Goo,Ogre Corpse Tosser,Combat Training,Pick a Fight,Grand Melee,Duel,Berserker's Call,Fighting Instinct,New Orders,Time of Triumph,New Orders,Legion Standard Bearer,Mercenary Exiles,Poised to Strike,Defensive Stance,Enrage,God's Strength,Spring the Trap,Double Edge,Bronze Legionnaire,Marrowfell Brawler,Ogre Conscript, Friendly Fire,Fog of War,Arcane Assault,Compel,At Any Cost,Whispers of Madness,Cunning Plan,Ventriloquy,Diabolic Revelation,Howling Mind,Echo Slam,Battlefield Control,Frostbite,Mystic Flare,Sow Venom,Barracks,Eclipse,Satyr Magician,Ignite,Strafing Run,Lightning Strike,Rolling Storm,Tower Barrage,Foresight,Prey on the Weak,Remote Detonation,Thunderstorm,Conflagration,Call the Reserves,Better Late Than Never,Dimensional Portal,Troll Soothsayer, Allseeing One's Favor,Defend the Weak,Juke,Roseleaf Rejuvenator,Champion of the Ancient,Smeevil Blacksmith,Homefield Advantage,Gust,Act of Defiance,Prowler Vanguard,Savage Wolf,Thunderhide Pack,Ion Shell,Altar of the Mad Moon,Rebel Decoy,Selfish Cleric,Revtel Convoy,Rampaging Hellbear,Satyr Duelist,Savage Wolf,Verdant Refuge,Mist of Avernus,Stars Align,Bellow,Rumusque Blessing,Defensive Bloom,Restoration Effort,Intimidation,Curse of Atrophy,Iron Branch Protection,Avernus' Blessing,Thunderhide Alpha, Blood Rage,Track,Heartstopper Aura,The Cover of Night,Hip Fire,Lodestone Demolition,Oglodi Vandal,Oglodi Catapult,Assassin's Shadow,Pit Fighter of Quoidge,Murder Plot,Collateral Damage,Trebuchets,Unsupervised Artillery,Iron Fog Goldmine,Assured Destruction,Escape Route,Assassinate,Winter's Curse,Gank,Coup de Grace,Forward Charge,Sister of the Veil,Steam Cannon,Keenfolk Turret,Assassin's Apprentice,Grazing Shot,No Accident,Slay,Pick Off,Ravenous Mass,Disciple of Nevermore,Assault Ladders,Mana Drain,Payday,Arcane Censure,Untested Grunt
+Strength: God's Strength, Viscous Nasal Goo, Berzerkers Call, Duel, Kracken Shell, Savage Wolf, Allseeing One's Favor, Prowler Vanguard, Fighting Instict, Double Edge, Enchant Totem, Bronze Legionnaire, Legion Standard Bearer, Smeevil Armsmaster, Cursed Satyr, Marrowfell Brawler, Ogre Conscript, Pit Fighter of Quoidge, Ravenous Mass, Assassin's Shadow, Smeevil Blacksmith, Roseleaf Rejuvenator, Thunderhide Pack, Thunderhide Alpha, Untested Grunt, Omexe Arena, Assured Destruction, Fight Through the Pain, New Orders, Poised to Strike, Defensive Stance, Pick a Fight, Combat Training, Time of Triumph, Spring the Trap, Ventriloquy, Forward Charge, Collateral Damage, Defend the Weak, Iron Branch Protection, Avernus' Blessing, Defensive Bloom
+
+
+Agility: Gust, Assassinate, Moon Glaves, Track, Overpower, Blood Rage, Venomous Gale, No Accident, Mercenary Exiles, Oglodi Catapult, Stonehall Elite, Oglodi Vandal, Rebel Decoy, Rampaging Hellbear, Satyr Duelist, Revtel Convoy, Sister of the Veil, Assassin's Apprentice, Champion of the Ancient, Homefield Advantage, Grand Melee, Escape Route, Trebuchets, Unsupervised Artillery, Iron Fog Goldmine, Keenfolk Turret, Steam Cannon, Rend Armor, Clear the Deck, Friendly Fire, Grazing Shot, Payday, Slay, Gank, Hip Fire, Pick Off, Bellow, Intimidation, Murder Plot, Crippling Blow, The Cover of Night, Act of Defiance, Coup de Grace
+
+
+Intelligence: Frostbite, Verdant Reffuge, Ignite, Mystic Flare, Mana Drain, Winter's Curse, Heartstopper Aura, Ion shell, Battlefield Control, Prey on the Weak, Barracks, Assault Ladders, Ogre Corpse Tosser, Disciple of Nevermore, Satyr Magician, Troll Soothsayer, Selfish Cleric, Howling Mind, Conflagration, Mist of Avernus, Altar of the Mad Moon, Diabolic Revelation, Strafing Run, Cunning Plan, Lightnig Strike, Whispers of Madness, At Any Cost, Better Late Than Never, Compel, Rolling Storm, Arcane Assault, Dimensional Portal, Fog of War, Foresight, Call the Reserves, Remote Detonation, Thunderstorm, Tower Barrage, Lodestone Demolition, Arcane Censure, Juke, Stars Align, Rumusque Blessing, Restoration Effort, Curse of Atrophy
 
 
 Items: Rumusque Vestments,Wingfall Hammer,Blink Dagger,Broadsword,Claymore,Chainmail,Fur-lined Mantle,Hero's Cape,Platemail,Barbed Mail,Demagicking Maul,Stonehall Plate,Stonehall Cloak,Leather Armor,Short Sword,Traveler's Cloak,Blade of the Vigil,Keenfolk Musket,Red Mist Maul,Shield of Basilius,Horn of the Alpha,Phase Boots,Ring of Tarrasque
@@ -16,4 +22,10 @@ Items: Rumusque Vestments,Wingfall Hammer,Blink Dagger,Broadsword,Claymore,Chain
 
 Current Heros:
 
-Tidehunter,Legion Commander,Axe,Centaur Warrunner,Bristleback,Sven,Pugna,Keefe the Bold, Skywrath Mage,Earthshaker,Venomancer,Prellex,Luna,J'Muy the Wise,Lycan,Omniknight,Drow Ranger,Treant Protector,Enchantress,Fahrvhan the Dreamer, Bloodseeker,Necrophos,Winter Wyvern,Sorla Khan,Phantom Assassin,Lion,Lich,Bounty Hunter,Debbi the Cunning
+Strength: Sven, Bristleback, Axe, Legion Commander, Tidehunter, Treant Protector, Lycan, Omniknight, Farven, Keefe, Centaur, Earthshaker
+
+
+Agility: Drow, Luna, Bounty, Bloodseeker, Venomancer, Debi, Phantom Assassin
+
+
+Intelligence: Enchantress, Skywrath, Lich, Lion, Winter Wyvern, Pugna, Necrophos, Jumuy, Sorla Khan, Prellex

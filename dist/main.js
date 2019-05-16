@@ -12923,5 +12923,46 @@
 					re.value += "," + re.value
 				}
 			})
+			importRed.addEventListener("click", function () {
+				let e = "ADCJY0TfrgCigYDJAFluwKCSoWChJRNoAKBEV5kBUhBcnRpZmFjdCAyIE1vbm8gUmVk";
+				if (e) {
+					ge.checked = !1;
+					let a = F.ParseDeck(e);
+					ne.value = a.cards.map(function (e) {
+							let a = G.card_set.card_list.find(function (a) {
+									return a.card_id == e.id
+								});
+							(a = a || U.card_set.card_list.find(function (a) {
+										return a.card_id == e.id
+									})) && (a = a.card_name.english),
+							a = [a];
+							for (var t = 1; t < e.count; t++)
+								a.push(a[0]);
+							return a
+						}).flat(),
+					ie.value = ne.value,
+					re.value = a.heroes.sort(function (e, a) {
+							return e.turn - a.turn
+						}).map(function (e) {
+							let a = G.card_set.card_list.find(function (a) {
+									return a.card_id == e.id
+								});
+							return (a = a || U.card_set.card_list.find(function (a) {
+										return a.card_id == e.id
+									})) && (a = a.card_name.english),
+							a
+						}),
+					re.value.split(",").forEach(function (e) {
+						let a;
+						(e = V.Cards.find(function (a) {
+									return a.Name == e
+								})) && (a = V.Cards.find(function (a) {
+									return a.Id == e.SignatureCard
+								})),
+						ne.value += "," + a.Name + "," + a.Name + "," + a.Name
+					}),
+					re.value += "," + re.value
+				}
+			})
 		}
 	]);
