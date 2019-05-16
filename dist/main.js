@@ -12695,6 +12695,7 @@
 			ue = document.getElementById("heroes-shuffle-btn"),
 			be = document.getElementById("import-game-btn"),
 			importGreen = document.getElementById("import-green-btn"),
+			importRed = document.getElementById("import-red-btn"),
 			ye = document.getElementById("other-game-btn"),
 			ke = document.getElementById("other-options"),
 			ve = document.getElementById("tower-handicap"),
