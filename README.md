@@ -5,7 +5,6 @@ Cards Not implemented are ignored
 
 Remove the "playartifact.com" from deck codes, they should start with ADC
 
-
 Current Cards:
 
 Strength: God's Strength, Viscous Nasal Goo, Berzerkers Call, Duel, Kracken Shell, Savage Wolf, Allseeing One's Favor, Prowler Vanguard, Fighting Instict, Double Edge, Enchant Totem, Bronze Legionnaire, Legion Standard Bearer, Smeevil Armsmaster, Cursed Satyr, Marrowfell Brawler, Ogre Conscript, Pit Fighter of Quoidge, Ravenous Mass, Assassin's Shadow, Smeevil Blacksmith, Roseleaf Rejuvenator, Thunderhide Pack, Thunderhide Alpha, Untested Grunt, Omexe Arena, Assured Destruction, Fight Through the Pain, New Orders, Poised to Strike, Defensive Stance, Pick a Fight, Combat Training, Time of Triumph, Spring the Trap, Ventriloquy, Forward Charge, Collateral Damage, Defend the Weak, Iron Branch Protection, Avernus' Blessing, Defensive Bloom
